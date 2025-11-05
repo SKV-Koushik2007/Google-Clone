@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Advanced Search</title>
+        <style>
+            body {
+                background-color: aliceblue;
+                font-family: system-ui, -apple-system, BlinkMacSystemFont;
+            }
+            img {
+                height: 70px;
+                margin: 20px;
+            }
+
+            #queries {
+                font-family: system-ui, -apple-system, BlinkMacSystemFont;
+                display: grid;
+                grid-template-columns: 200px 1fr;
+                gap: 10px 10px;
+                max-width: 800px;
+                margin: 20px;
+            }
+
+            label {
+                text-align: left;
+                padding: 5px;
+            }
+
+            input {
+                width: 100%;
+                padding: 5px;
+            }
+
+            #sbutton {
+                background-color: hsl(197, 100%, 78%);
+                width: 150px;
+                font-family: system-ui, -apple-system, BlinkMacSystemFont;
+                float: right;
+                border: 1px solid hsla(0, 0%, 100%, 0);
+                margin: 30px;
+                border-radius: 3px;
+            }
+
+            #sbutton:hover {
+                border: 1px solid hsl(197, 100%, 38%);
+                background-color: hsl(197, 100%, 83%);
+            }
+        </style>
+    </head>
+    <body>
+        <a href="gsearch.html" title="Go back"
+            ><img src="flogo.PNG" alt="Logo" id="logo"
+        /></a>
+        <h1>Advanced Search</h1>
+        <hr />
+        <h3>Find pages with...<br /></h3>
+        <form id="queries" action="https://www.google.com/search">
+            <label for="as_q" class="lbls">All these words: </label>
+            <input type="text" name="as_q" id="as_q" class="ipts" required />
+            <label for="as_epq" class="lbls">This exact word or phrase: </label>
+            <input type="text" name="as_epq" id="as_epq" class="ipts" />
+            <label for="as_oq" class="lbls">Any of these words: </label>
+            <input type="text" name="as_oq" id="as_oq" class="ipts" />
+            <label for="as_eq" class="lbls">None of these words: </label>
+            <input type="text" name="as_eq" id="as_eq" class="ipts" />
+            <br>
+            <div><input id="sbutton" type="submit" value="Advanced Search" /></div>
+        </form>
+    </body>
+</html>
+
+<!-- https://www.google.com/search?as_q=ax&as_epq=pqr&as_oq=123&as_eq=abc -->

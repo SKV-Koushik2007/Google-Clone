@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Fake Search</title>
+        <script
+            src="https://kit.fontawesome.com/56d672fc64.js"
+            crossorigin="anonymous"
+        ></script>
+        <style>
+            body {
+                background-color: aliceblue;
+            }
+
+            .cont {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-family: system-ui, -apple-system, BlinkMacSystemFont,
+                    "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans",
+                    "Helvetica Neue", sans-serif;
+            }
+
+            #image {
+                margin-top: 20vh;
+            }
+
+            #sbox {
+                height: 20px;
+                align-self: center;
+                padding-bottom: 20px;
+            }
+
+            #sbox > input {
+                border: none;
+                background-color: hsl(208, 100%, 95%);
+                box-shadow: 0px 0px 10px hsl(207, 20%, 59%);
+                width: 70%;
+                height: 40px;
+                border-radius: 50px;
+                margin: 10px;
+                padding: 5px;
+                padding-left: 20px;
+                padding-right: 20px;
+                font-size: 1.1em;
+                font-family: system-ui, -apple-system, BlinkMacSystemFont,
+                    "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans",
+                    "Helvetica Neue", sans-serif;
+            }
+
+            #sbox > input:hover {
+                box-shadow: 0px 0px 20px hsl(207, 20%, 59%);
+            }
+
+            .buttons {
+                border: 1px solid hsla(0, 0%, 83%, 0);
+                background-color: hsl(207, 10%, 92%);
+                margin: 10px;
+                padding: 15px;
+                border-radius: 10px;
+                font-size: 1.02em;
+                font-family: system-ui, -apple-system, BlinkMacSystemFont,
+                    "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans",
+                    "Helvetica Neue", sans-serif;
+            }
+
+            .buttons:hover {
+                border: 1px solid lightgray;
+                box-shadow: 0px 0px 2px lightgray;
+                cursor: pointer;
+            }
+
+            #doodles {
+                text-decoration: none;
+                color: black;
+            }
+
+            #doodles:visited {
+                text-decoration: none;
+                color: black;
+            }
+
+            #adv {
+                text-decoration: none;
+                color: black;
+            }
+
+            #adv:visited {
+                text-decoration: none;
+                color: black;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="cont" id="image">
+            <img src="flogo.PNG" alt="Logo" id="logo" />
+        </div>
+        <form action="https://www.google.com/search">
+            <div id="sbox" class="cont">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="text" id="query" name="q" />
+            </div>
+            <div id="buttons" class="cont">
+                <input
+                    type="submit"
+                    class="buttons"
+                    id="nsearch"
+                    value="Google Search"
+                />
+                <button id="lucky" class="buttons">
+                    <a id="doodles" href="https://doodles.google/"
+                        >I'm Feeling Lucky</a
+                    >
+                </button>
+            </div>
+            <div class="cont" id="buttons">
+                <button class="buttons">
+                    <a id="adv" href="asearch.html">Advanced Search</a>
+                </button>
+            </div>
+        </form>
+    </body>
+</html>
